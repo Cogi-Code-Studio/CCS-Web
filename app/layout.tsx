@@ -1,6 +1,13 @@
 import type { Metadata } from "next";
 import { IBM_Plex_Mono } from "next/font/google";
 import { getCurrentLocale } from "@/lib/i18n.server";
+import {
+  getAbsoluteUrl,
+  getSiteUrl,
+  siteDescription,
+  siteKeywords,
+  siteName,
+} from "@/lib/seo";
 import "./globals.css";
 
 const monoFont = IBM_Plex_Mono({
@@ -9,38 +16,58 @@ const monoFont = IBM_Plex_Mono({
   weight: ["400", "500"],
 });
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000";
+const siteUrl = getSiteUrl();
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Cogi Code Studio",
-    template: "%s | Cogi Code Studio",
+    default: siteName,
+    template: `%s | ${siteName}`,
   },
-  description:
-    "Tiny software for everyday friction, made with a little more feeling.",
-  applicationName: "Cogi Code Studio",
+  description: siteDescription,
+  applicationName: siteName,
+  alternates: {
+    canonical: "/",
+  },
+  category: "technology",
+  referrer: "origin-when-cross-origin",
+  creator: siteName,
+  publisher: siteName,
+  authors: [{ name: siteName, url: siteUrl }],
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
+  },
   openGraph: {
-    title: "Cogi Code Studio",
-    description:
-      "Tiny software for everyday friction, made with a little more feeling.",
-    siteName: "Cogi Code Studio",
+    title: siteName,
+    description: siteDescription,
+    url: siteUrl,
+    siteName,
     type: "website",
+    locale: "en_US",
+    images: [
+      {
+        url: getAbsoluteUrl("/opengraph-image.png"),
+        width: 1536,
+        height: 1024,
+        alt: "Cogi Code Studio pixel logo on a dark navy background.",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Cogi Code Studio",
-    description:
-      "Tiny software for everyday friction, made with a little more feeling.",
+    title: siteName,
+    description: siteDescription,
+    images: [getAbsoluteUrl("/twitter-image.png")],
   },
-  keywords: [
-    "Cogi Code Studio",
-    "indie software",
-    "Apple apps",
-    "Galaxy Pomodoro",
-    "Capture In Picture",
-    "retro pixel landing page",
-  ],
+  keywords: [...siteKeywords],
 };
 
 export default async function RootLayout({

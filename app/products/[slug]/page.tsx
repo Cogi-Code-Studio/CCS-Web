@@ -18,6 +18,12 @@ import {
   getProductSlugs,
   studioEmail,
 } from "@/lib/products";
+import {
+  getAbsoluteUrl,
+  getProductPath,
+  getProductStructuredData,
+  siteName,
+} from "@/lib/seo";
 
 type ProductPageProps = {
   params: Promise<{ slug: string }>;
@@ -42,15 +48,29 @@ export async function generateMetadata({
   return {
     title: product.name,
     description: product.cardDescription,
+    alternates: {
+      canonical: getProductPath(product.slug),
+    },
     openGraph: {
       title: `${product.name} | Cogi Code Studio`,
       description: product.cardDescription,
       type: "website",
+      url: getAbsoluteUrl(getProductPath(product.slug)),
+      siteName,
+      images: [
+        {
+          url: getAbsoluteUrl("/opengraph-image.png"),
+          width: 1536,
+          height: 1024,
+          alt: "Cogi Code Studio pixel logo on a dark navy background.",
+        },
+      ],
     },
     twitter: {
       card: "summary_large_image",
       title: `${product.name} | Cogi Code Studio`,
       description: product.cardDescription,
+      images: [getAbsoluteUrl("/twitter-image.png")],
     },
   };
 }
@@ -69,9 +89,14 @@ export default async function ProductPage({ params }: ProductPageProps) {
   const otherProducts = getProducts(locale).filter(
     (entry) => entry.slug !== product.slug,
   );
+  const structuredData = getProductStructuredData(product);
 
   return (
     <>
+      <script
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+        type="application/ld+json"
+      />
       <SiteHeader
         languageLabel={copy.header.languageLabel}
         locale={locale}

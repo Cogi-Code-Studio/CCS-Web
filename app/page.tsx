@@ -10,14 +10,60 @@ import {
 import { siteCopy } from "@/lib/i18n";
 import { getCurrentLocale } from "@/lib/i18n.server";
 import { getProducts, studioEmail } from "@/lib/products";
+import { getAbsoluteUrl, siteDescription, siteName } from "@/lib/seo";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: siteName,
+  description: siteDescription,
+  alternates: {
+    canonical: "/",
+  },
+};
 
 export default async function Home() {
   const locale = await getCurrentLocale();
   const copy = siteCopy[locale];
   const products = getProducts(locale);
+  const organizationStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: siteName,
+    url: getAbsoluteUrl("/"),
+    logo: getAbsoluteUrl("/icon.png"),
+    image: getAbsoluteUrl("/opengraph-image.png"),
+  };
+  const websiteStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: siteName,
+    url: getAbsoluteUrl("/"),
+    description: siteDescription,
+  };
+  const itemListStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name: "Cogi Code Studio Products",
+    itemListElement: products.map((product, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      url: getAbsoluteUrl(`/products/${product.slug}`),
+      name: product.name,
+    })),
+  };
 
   return (
     <>
+      <script
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify([
+            organizationStructuredData,
+            websiteStructuredData,
+            itemListStructuredData,
+          ]),
+        }}
+        type="application/ld+json"
+      />
       <SiteHeader
         languageLabel={copy.header.languageLabel}
         locale={locale}

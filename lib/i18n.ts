@@ -22,7 +22,7 @@ export const siteCopy = {
       title: "Tiny software for everyday friction.",
       accent: "Made with a little more feeling.",
       description:
-        "Cogi Code Studio builds thoughtful apps for the Apple ecosystem. The goal is simple: remove small frustrations without stripping away personality, warmth, or play.",
+        "Cogi Code Studio makes convenient and delightful software. The goal is simple: remove small frustrations without stripping away personality, warmth, or a little play.",
     },
     buttons: {
       seeProducts: "See products",
@@ -84,7 +84,7 @@ export const siteCopy = {
     },
     contact: {
       eyebrow: "Contact",
-      title: "Say hello before the apps land.",
+      title: "Curious about the products or CCS?",
       description:
         "For early interest, future App Store links, or studio inquiries, use the contact button below.",
       labels: {
@@ -140,7 +140,7 @@ export const siteCopy = {
       title: "일상의 불편을 줄이는 작은 소프트웨어.",
       accent: "감성은 한 스푼 더.",
       description:
-        "Cogi Code Studio는 애플 생태계를 위한 소프트웨어를 만듭니다. 작은 불편을 덜어내되, 성격과 따뜻함, 그리고 약간의 장난기는 남겨두는 것이 목표입니다.",
+        "Cogi Code Studio는 편리하고 즐거운 소프트웨어를 만듭니다. 작은 불편을 덜어내되, 성격과 따뜻함, 그리고 약간의 장난기는 남겨두는 것이 목표입니다.",
     },
     buttons: {
       seeProducts: "제품 보기",
@@ -202,7 +202,7 @@ export const siteCopy = {
     },
     contact: {
       eyebrow: "문의",
-      title: "앱이 착륙하기 전에 먼저 인사해요.",
+      title: "제품이나 CCS에 관해 궁금하신가요?",
       description:
         "초기 관심, App Store 링크 알림, 스튜디오 문의까지 아래 문의하기 버튼으로 연결할 수 있습니다.",
       labels: {
