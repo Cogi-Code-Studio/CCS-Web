@@ -143,13 +143,26 @@ export function SiteHeader({ locale, nav, languageLabel }: SiteHeaderProps) {
   );
 }
 
-export function SiteFooter({ contactLabel = "Contact" }: { contactLabel?: string }) {
+export function SiteFooter({
+  contactLabel = "Contact",
+  privacyLabel = "Privacy",
+}: {
+  contactLabel?: string;
+  privacyLabel?: string;
+}) {
+  const privacyHref = "/privacy" as Route;
+
   return (
-    <footer className="mx-auto flex w-full max-w-6xl items-center justify-between gap-4 px-6 pb-8 pt-6 text-sm text-text-muted sm:px-8 lg:px-10">
+    <footer className="mx-auto flex w-full max-w-6xl flex-col gap-4 px-6 pb-8 pt-6 text-sm text-text-muted sm:flex-row sm:items-center sm:justify-between sm:px-8 lg:px-10">
       <p>© {new Date().getFullYear()} Cogi Code Studio.</p>
-      <a className="hover:text-text-primary" href={`mailto:${studioEmail}`}>
-        {contactLabel}
-      </a>
+      <nav className="flex flex-wrap items-center gap-4">
+        <Link className="hover:text-text-primary" href={privacyHref}>
+          {privacyLabel}
+        </Link>
+        <a className="hover:text-text-primary" href={`mailto:${studioEmail}`}>
+          {contactLabel}
+        </a>
+      </nav>
     </footer>
   );
 }

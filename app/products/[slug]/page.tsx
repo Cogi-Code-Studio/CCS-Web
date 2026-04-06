@@ -282,7 +282,10 @@ export default async function ProductPage({ params }: ProductPageProps) {
           </div>
         </section>
       </main>
-      <SiteFooter contactLabel={copy.buttons.contact} />
+      <SiteFooter
+        contactLabel={copy.buttons.contact}
+        privacyLabel={copy.footer.privacy}
+      />
     </>
   );
 }

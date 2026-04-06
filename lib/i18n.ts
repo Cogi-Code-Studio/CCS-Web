@@ -35,6 +35,9 @@ export const siteCopy = {
       emailCogi: "Contact us",
       appStoreSoon: "App Store soon",
     },
+    footer: {
+      privacy: "Privacy",
+    },
     highlights: [
       {
         title: "Apple-first",
@@ -93,6 +96,56 @@ export const siteCopy = {
       },
       statusDescription:
         "Both products are currently marked as coming soon, with App Store links planned later.",
+    },
+    privacy: {
+      eyebrow: "Privacy",
+      title: "Privacy Policy",
+      description:
+        "A lightweight overview of how Cogi Code Studio currently handles personal information on this website and through direct contact.",
+      updatedAt: "Effective April 6, 2026",
+      summaryTitle: "Current scope",
+      summary:
+        "This policy applies to the current Cogi Code Studio website, product pages, and direct email inquiries. If separate apps launch with their own data practices later, additional notices may be added for those services.",
+      sections: [
+        {
+          title: "What we collect",
+          paragraphs: [
+            "We may receive the information you choose to send by email, such as your name, email address, and the contents of your message.",
+            "We also use a small cookie to remember language preference on the website, and hosting or security services may automatically generate basic technical logs such as IP address, browser type, referral URL, and access time.",
+          ],
+        },
+        {
+          title: "How we use it",
+          paragraphs: [
+            "Collected information is used to respond to inquiries, operate and secure the website, and prepare future product communication when you explicitly ask to hear back from us.",
+            "We do not use personal information for unrelated marketing blasts, and we try to keep collection limited to what is reasonably needed for the current studio site.",
+          ],
+        },
+        {
+          title: "Sharing and storage",
+          paragraphs: [
+            "We do not sell personal information. Information may be processed by services reasonably required to run the site or deliver email, such as hosting, infrastructure, or email providers.",
+            "Inquiry emails may be kept for as long as needed to respond, follow up, or maintain a simple history of studio communication. Technical logs are typically retained only for operational or security needs.",
+          ],
+        },
+        {
+          title: "Your choices",
+          paragraphs: [
+            "If you want to ask what information we may hold about you, request correction or deletion, or raise a privacy concern, contact us by email.",
+            "We will review reasonable requests in good faith and respond within a practical timeframe, subject to any legal or operational limits.",
+          ],
+        },
+        {
+          title: "Future updates",
+          paragraphs: [
+            "Because the studio and its products are still early, this policy may change as new services launch or data practices become more specific.",
+            "When that happens, the updated policy will be posted on this page with a revised effective date.",
+          ],
+        },
+      ],
+      contactTitle: "Questions about privacy?",
+      contactDescription:
+        "If you want to ask about stored information, request correction or deletion, or report a concern, send us an email and we will take a careful look.",
     },
     detail: {
       statusCardLabel: "Status",
@@ -153,6 +206,9 @@ export const siteCopy = {
       emailCogi: "문의하기",
       appStoreSoon: "App Store 예정",
     },
+    footer: {
+      privacy: "개인정보 처리방침",
+    },
     highlights: [
       {
         title: "애플 중심",
@@ -211,6 +267,56 @@ export const siteCopy = {
       },
       statusDescription:
         "두 제품 모두 현재는 출시 예정 상태이며, App Store 링크는 추후 연결될 예정입니다.",
+    },
+    privacy: {
+      eyebrow: "개인정보",
+      title: "개인정보 처리방침",
+      description:
+        "Cogi Code Studio 웹사이트와 직접 문의 과정에서 현재 어떤 개인정보를 어떻게 다루는지 가볍게 정리한 안내입니다.",
+      updatedAt: "시행일: 2026년 4월 6일",
+      summaryTitle: "적용 범위",
+      summary:
+        "이 방침은 현재 운영 중인 Cogi Code Studio 웹사이트, 제품 소개 페이지, 그리고 이메일 문의에 적용됩니다. 추후 개별 앱이 출시되면서 별도 데이터 처리 항목이 생기면 서비스별 안내를 추가할 수 있습니다.",
+      sections: [
+        {
+          title: "수집하는 정보",
+          paragraphs: [
+            "이메일로 문의하실 경우 이름, 이메일 주소, 문의 내용처럼 사용자가 직접 보내는 정보를 받을 수 있습니다.",
+            "또한 사이트에서는 언어 선택 상태를 기억하기 위한 작은 쿠키를 사용하며, 호스팅 또는 보안 서비스 과정에서 IP 주소, 브라우저 종류, 접속 시각, 유입 경로 같은 기본 기술 로그가 자동으로 생성될 수 있습니다.",
+          ],
+        },
+        {
+          title: "이용 목적",
+          paragraphs: [
+            "수집된 정보는 문의 응답, 사이트 운영과 보안 유지, 그리고 사용자가 회신을 원한 경우 향후 제품 소식 전달을 위해 사용됩니다.",
+            "현재 스튜디오 사이트 운영에 합리적으로 필요한 범위를 넘어서 과도하게 정보를 수집하거나, 무관한 대량 마케팅에 활용하지 않으려 합니다.",
+          ],
+        },
+        {
+          title: "제3자 제공 및 보관",
+          paragraphs: [
+            "개인정보를 판매하지 않습니다. 다만 사이트 운영이나 이메일 전달에 필요한 범위에서 호스팅, 인프라, 메일 제공업체 등 필수 서비스에 의해 처리될 수 있습니다.",
+            "문의 메일은 답변과 후속 대응, 간단한 커뮤니케이션 이력 관리를 위해 필요한 기간 동안 보관될 수 있으며, 기술 로그는 운영 및 보안 목적의 범위에서만 유지됩니다.",
+          ],
+        },
+        {
+          title: "이용자의 권리",
+          paragraphs: [
+            "보관 중인 정보 확인, 정정, 삭제 요청이나 개인정보 관련 우려 사항이 있다면 이메일로 문의하실 수 있습니다.",
+            "법적 또는 운영상 제한이 없는 범위에서 합리적인 기간 내에 성실하게 검토하고 답변드리겠습니다.",
+          ],
+        },
+        {
+          title: "방침 변경",
+          paragraphs: [
+            "스튜디오와 제품이 아직 초기 단계이기 때문에, 새로운 서비스가 추가되거나 처리 방식이 구체화되면 이 방침도 함께 업데이트될 수 있습니다.",
+            "변경 시에는 이 페이지에 최신 내용을 반영하고 시행일도 함께 갱신합니다.",
+          ],
+        },
+      ],
+      contactTitle: "개인정보 관련 문의가 있나요?",
+      contactDescription:
+        "보관 정보 확인, 정정이나 삭제 요청, 기타 우려 사항이 있다면 이메일로 알려 주세요. 가능한 범위에서 꼼꼼히 확인하겠습니다.",
     },
     detail: {
       statusCardLabel: "상태",

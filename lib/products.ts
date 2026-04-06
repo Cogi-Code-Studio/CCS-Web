@@ -1,6 +1,6 @@
 import type { Locale } from "@/lib/i18n";
 
-export const studioEmail = "ryuwoong.dev@gmail.com";
+export const studioEmail = "admin@cogicode.com";
 
 export type ProductSlug = "galaxy-pomodoro" | "capture-in-picture";
 
