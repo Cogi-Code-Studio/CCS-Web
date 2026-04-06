@@ -155,7 +155,10 @@ export default async function Home() {
           </p>
         </section>
       </main>
-      <SiteFooter contactLabel={copy.buttons.contact} />
+      <SiteFooter
+        contactLabel={copy.buttons.contact}
+        privacyLabel={copy.footer.privacy}
+      />
     </>
   );
 }

@@ -32,7 +32,10 @@ export default async function NotFound() {
           </div>
         </section>
       </main>
-      <SiteFooter contactLabel={copy.buttons.contact} />
+      <SiteFooter
+        contactLabel={copy.buttons.contact}
+        privacyLabel={copy.footer.privacy}
+      />
     </>
   );
 }
