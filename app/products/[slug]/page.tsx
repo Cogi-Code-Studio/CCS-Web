@@ -5,6 +5,7 @@ import { notFound } from "next/navigation";
 import {
   PixelBadge,
   PixelButton,
+  ProductIcon,
   ProductMockup,
   SectionHeading,
   SiteFooter,
@@ -20,6 +21,8 @@ import {
 } from "@/lib/products";
 import {
   getAbsoluteUrl,
+  getProductMetadataImage,
+  getProductMetadataImageAlt,
   getProductPath,
   getProductStructuredData,
   siteName,
@@ -47,31 +50,59 @@ export async function generateMetadata({
 
   return {
     title: product.name,
-    description: product.cardDescription,
+    description: product.overview,
     alternates: {
       canonical: getProductPath(product.slug),
     },
+    keywords: Array.from(
+      new Set([
+        product.name,
+        product.category,
+        product.platform,
+        ...product.features.map((feature) => feature.title),
+      ]),
+    ),
     openGraph: {
       title: `${product.name} | Cogi Code Studio`,
-      description: product.cardDescription,
+      description: product.overview,
       type: "website",
       url: getAbsoluteUrl(getProductPath(product.slug)),
       siteName,
       images: [
         {
-          url: getAbsoluteUrl("/opengraph-image.png"),
-          width: 1536,
+          url: getProductMetadataImage(product),
+          width: 1024,
           height: 1024,
-          alt: "Cogi Code Studio pixel logo on a dark navy background.",
+          alt: getProductMetadataImageAlt(product),
         },
       ],
     },
     twitter: {
-      card: "summary_large_image",
+      card: product.iconSrc ? "summary" : "summary_large_image",
       title: `${product.name} | Cogi Code Studio`,
-      description: product.cardDescription,
-      images: [getAbsoluteUrl("/twitter-image.png")],
+      description: product.overview,
+      images: [getProductMetadataImage(product)],
     },
+    ...(product.iconSrc
+      ? {
+          icons: {
+            icon: [
+              {
+                url: product.iconSrc,
+                type: "image/png",
+                sizes: "1024x1024",
+              },
+            ],
+            apple: [
+              {
+                url: product.iconSrc,
+                type: "image/png",
+                sizes: "1024x1024",
+              },
+            ],
+          },
+        }
+      : {}),
   };
 }
 
@@ -90,6 +121,7 @@ export default async function ProductPage({ params }: ProductPageProps) {
     (entry) => entry.slug !== product.slug,
   );
   const structuredData = getProductStructuredData(product);
+  const usesIconShowcase = Boolean(product.iconSrc);
 
   return (
     <>
@@ -131,12 +163,26 @@ export default async function ProductPage({ params }: ProductPageProps) {
               </p>
             </div>
             <div className="flex flex-wrap gap-3">
-              <span className="pixel-button pixel-button--disabled">
-                {product.ctaLabel}
-              </span>
-              <PixelButton href={`mailto:${studioEmail}`} tone="ghost">
-                {copy.buttons.sayHello}
-              </PixelButton>
+              {product.heroActions?.length ? (
+                product.heroActions.map((action) => (
+                  <PixelButton
+                    key={action.href}
+                    href={action.href}
+                    tone={action.tone ?? "solid"}
+                  >
+                    {action.label}
+                  </PixelButton>
+                ))
+              ) : (
+                <>
+                  <span className="pixel-button pixel-button--disabled">
+                    {product.ctaLabel}
+                  </span>
+                  <PixelButton href={`mailto:${studioEmail}`} tone="ghost">
+                    {copy.buttons.sayHello}
+                  </PixelButton>
+                </>
+              )}
             </div>
             <div className="grid gap-3 sm:grid-cols-3">
               {product.statusNotes.map((note) => (
@@ -152,8 +198,12 @@ export default async function ProductPage({ params }: ProductPageProps) {
             </div>
           </div>
 
-          <div className="flex items-center">
-            <ProductMockup locale={locale} slug={product.slug} />
+          <div className="flex items-center justify-center">
+            {usesIconShowcase ? (
+              <ProductIcon priority product={product} size="showcase" />
+            ) : (
+              <ProductMockup locale={locale} slug={product.slug} />
+            )}
           </div>
         </section>
 
@@ -191,7 +241,7 @@ export default async function ProductPage({ params }: ProductPageProps) {
                     {copy.detail.pricing}
                   </p>
                   <p className="mt-3 text-sm leading-7 text-text-secondary">
-                    {copy.detail.pricingDescription}
+                    {product.pricingNote ?? copy.detail.pricingDescription}
                   </p>
                 </div>
               </div>
@@ -233,16 +283,28 @@ export default async function ProductPage({ params }: ProductPageProps) {
           <div className="pixel-card p-6 lg:p-8">
             <SectionHeading
               eyebrow={copy.detail.contactSection.eyebrow}
-              title={copy.detail.contactSection.title}
+              title={product.contactSectionTitle ?? copy.detail.contactSection.title}
               description={product.contactPrompt}
             />
             <div className="mt-6 flex flex-wrap gap-3">
               <PixelButton href={`mailto:${studioEmail}`}>
                 {copy.buttons.emailCogi}
               </PixelButton>
-              <span className="pixel-button pixel-button--ghost">
-                {copy.buttons.appStoreSoon}
-              </span>
+              {product.contactActions?.length ? (
+                product.contactActions.map((action) => (
+                  <PixelButton
+                    key={action.href}
+                    href={action.href}
+                    tone={action.tone ?? "ghost"}
+                  >
+                    {action.label}
+                  </PixelButton>
+                ))
+              ) : (
+                <span className="pixel-button pixel-button--ghost">
+                  {copy.buttons.appStoreSoon}
+                </span>
+              )}
             </div>
           </div>
         </section>

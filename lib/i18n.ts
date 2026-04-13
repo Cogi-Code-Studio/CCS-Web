@@ -329,7 +329,7 @@ export const siteCopy = {
       feature: "기능",
       statusSection: {
         eyebrow: "상태",
-        title: "아직 예열 중이에요.",
+        title: "아직 준비 중이에요.",
         description:
           "이 페이지는 App Store 링크와 가격이 확정되기 전에도 제품의 방향과 분위기를 먼저 보여주기 위한 구조입니다.",
       },

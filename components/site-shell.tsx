@@ -44,6 +44,12 @@ type ProductCardProps = {
   viewDetailLabel: string;
 };
 
+type ProductIconProps = {
+  product: Product;
+  size?: "card" | "hero" | "showcase";
+  priority?: boolean;
+};
+
 function getProductCardTitleLines(name: string) {
   if (name.includes(" ")) {
     const words = name.split(" ");
@@ -260,9 +266,12 @@ export function ProductCard({
   return (
     <article className="pixel-card product-rail__item flex h-full snap-start flex-col justify-between gap-5 p-5">
       <div className="min-w-0 space-y-4">
-        <div className="flex flex-wrap gap-2">
-          <PixelBadge tone="warm">{product.platform}</PixelBadge>
-          <PixelBadge>{product.status}</PixelBadge>
+        <div className="flex items-start justify-between gap-4">
+          <div className="flex flex-wrap gap-2">
+            <PixelBadge tone="warm">{product.platform}</PixelBadge>
+            <PixelBadge>{product.status}</PixelBadge>
+          </div>
+          <ProductIcon product={product} />
         </div>
         <div className="space-y-2">
           <p className="font-display text-xs uppercase tracking-[0.24em] text-accent-primary">
@@ -284,6 +293,47 @@ export function ProductCard({
         {viewDetailLabel}
       </Link>
     </article>
+  );
+}
+
+export function ProductIcon({
+  product,
+  size = "card",
+  priority = false,
+}: ProductIconProps) {
+  if (!product.iconSrc) {
+    return null;
+  }
+
+  const frameClassName =
+    size === "showcase"
+      ? "w-full max-w-[20rem] p-4 sm:max-w-[24rem] sm:p-5 lg:max-w-[26rem]"
+      : size === "hero"
+        ? "w-24 p-2.5 sm:w-28 sm:p-3"
+        : "w-16 p-1.5 sm:w-20 sm:p-2";
+
+  const imageSizes =
+    size === "showcase"
+      ? "(min-width: 1024px) 416px, (min-width: 640px) 384px, calc(100vw - 64px)"
+      : size === "hero"
+        ? "(min-width: 640px) 112px, 96px"
+        : "80px";
+
+  return (
+    <div
+      className={`pixel-window relative shrink-0 overflow-hidden border-corgi-cream/18 bg-[radial-gradient(circle_at_top,_rgba(232,154,71,0.24),_transparent_55%),linear-gradient(180deg,#191525_0%,#23202f_100%)] ${frameClassName}`}
+    >
+      <div className="pixel-grid absolute inset-0 opacity-35" />
+      <Image
+        src={product.iconSrc}
+        alt={product.iconAlt ?? `${product.name} icon`}
+        width={1024}
+        height={1024}
+        priority={priority}
+        sizes={imageSizes}
+        className="relative z-10 h-auto w-full"
+      />
+    </div>
   );
 }
 

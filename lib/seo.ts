@@ -13,6 +13,9 @@ export const siteKeywords = [
   "Capture In Picture",
   "pixel art landing page",
 ] as const;
+export const defaultShareImagePath = "/opengraph-image.png";
+export const defaultShareImageAlt =
+  "Cogi Code Studio pixel logo on a dark navy background.";
 
 export function getSiteUrl() {
   const explicitUrl = process.env.NEXT_PUBLIC_SITE_URL;
@@ -42,6 +45,14 @@ export function getProductPath(slug: ProductSlug) {
   return `/products/${slug}`;
 }
 
+export function getProductMetadataImage(product: Product) {
+  return getAbsoluteUrl(product.iconSrc ?? defaultShareImagePath);
+}
+
+export function getProductMetadataImageAlt(product: Product) {
+  return product.iconAlt ?? defaultShareImageAlt;
+}
+
 export function getProductCategory(product: Product) {
   if (product.slug === "galaxy-pomodoro") {
     return "ProductivityApplication";
@@ -51,6 +62,13 @@ export function getProductCategory(product: Product) {
 }
 
 export function getProductStructuredData(product: Product) {
+  const downloadUrl = product.heroActions?.find((action) =>
+    /^https?:\/\//.test(action.href),
+  )?.href;
+  const sameAs = [...(product.heroActions ?? []), ...(product.contactActions ?? [])]
+    .map((action) => action.href)
+    .filter((href) => /^https?:\/\//.test(href));
+
   return {
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
@@ -59,6 +77,12 @@ export function getProductStructuredData(product: Product) {
     operatingSystem: product.platform,
     description: product.cardDescription,
     url: getAbsoluteUrl(getProductPath(product.slug)),
+    image: getProductMetadataImage(product),
+    ...(downloadUrl ? { downloadUrl } : {}),
+    ...(sameAs.length ? { sameAs } : {}),
+    ...(/free|무료/i.test(product.pricingNote ?? "")
+      ? { isAccessibleForFree: true }
+      : {}),
     publisher: {
       "@type": "Organization",
       name: siteName,
