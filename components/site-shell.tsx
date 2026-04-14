@@ -26,10 +26,6 @@ type PixelButtonProps = {
 
 type SiteHeaderProps = {
   locale: Locale;
-  nav: {
-    products: string;
-    contact: string;
-  };
   languageLabel: string;
 };
 
@@ -117,34 +113,26 @@ const mockupCopy = {
   },
 } as const;
 
-export function SiteHeader({ locale, nav, languageLabel }: SiteHeaderProps) {
-  const productsHref = "/#products" as Route;
-  const contactHref = "/#contact" as Route;
-
+export function SiteHeader({ locale, languageLabel }: SiteHeaderProps) {
   return (
-    <header className="mx-auto flex w-full max-w-6xl items-center justify-between gap-4 px-6 pb-4 pt-6 sm:px-8 lg:px-10">
-      <Link href="/" className="pixel-card flex items-center gap-3 px-4 py-3">
-        <span className="font-pixel text-sm uppercase tracking-[0.2em] text-accent-primary">
-          CCS
-        </span>
-        <span className="text-xs uppercase tracking-[0.22em] text-text-secondary">
-          Cogi Code Studio
-        </span>
-      </Link>
-      <div className="flex flex-wrap items-center justify-end gap-2">
-        <nav className="flex flex-wrap items-center gap-2 text-xs uppercase tracking-[0.2em] text-text-secondary">
-          <Link className="pixel-chip" href={productsHref}>
-            {nav.products}
-          </Link>
-          <Link className="pixel-chip" href={contactHref}>
-            {nav.contact}
-          </Link>
-        </nav>
-        <LanguageToggle
-          label={languageLabel}
-          locale={locale}
-        />
+    <header className="mx-auto flex w-full max-w-6xl items-center justify-between gap-3 px-6 pb-4 pt-6 sm:gap-4 sm:px-8 lg:px-10">
+      <div className="flex min-w-0 items-center gap-3">
+        <Link
+          href="/"
+          className="pixel-card inline-flex shrink-0 items-center gap-3 px-4 py-3"
+        >
+          <span className="font-pixel text-sm uppercase tracking-[0.2em] text-accent-primary">
+            CCS
+          </span>
+          <span className="text-xs uppercase tracking-[0.22em] text-text-secondary">
+            Cogi Code Studio
+          </span>
+        </Link>
       </div>
+      <LanguageToggle
+        label={languageLabel}
+        locale={locale}
+      />
     </header>
   );
 }
