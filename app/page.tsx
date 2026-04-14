@@ -67,7 +67,6 @@ export default async function Home() {
       <SiteHeader
         languageLabel={copy.header.languageLabel}
         locale={locale}
-        nav={copy.header.nav}
       />
       <main className="relative z-10 mx-auto flex w-full max-w-6xl flex-1 flex-col gap-20 px-6 pb-20 sm:px-8 lg:px-10">
         <section className="grid gap-10 pt-6 lg:grid-cols-[minmax(0,1.05fr)_minmax(280px,0.95fr)] lg:items-start">
