@@ -51,7 +51,6 @@ export default async function PrivacyPage() {
       <SiteHeader
         languageLabel={copy.header.languageLabel}
         locale={locale}
-        nav={copy.header.nav}
       />
       <main className="relative z-10 mx-auto flex w-full max-w-6xl flex-1 flex-col gap-10 px-6 pb-20 sm:px-8 lg:px-10">
         <Link className="pixel-chip w-fit" href="/">

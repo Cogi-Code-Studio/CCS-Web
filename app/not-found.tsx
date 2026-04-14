@@ -12,7 +12,6 @@ export default async function NotFound() {
       <SiteHeader
         languageLabel={copy.header.languageLabel}
         locale={locale}
-        nav={copy.header.nav}
       />
       <main className="relative z-10 mx-auto flex w-full max-w-6xl flex-1 items-center px-6 py-16 sm:px-8 lg:px-10">
         <section className="pixel-card mx-auto max-w-3xl space-y-6 p-8 text-center lg:p-12">

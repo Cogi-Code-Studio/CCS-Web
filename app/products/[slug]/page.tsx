@@ -111,7 +111,6 @@ export default async function ProductPage({ params }: ProductPageProps) {
   const locale = await getCurrentLocale();
   const copy = siteCopy[locale];
   const product = getProductBySlug(slug, locale);
-  const productsHref = "/#products" as Route;
 
   if (!product) {
     notFound();
@@ -132,13 +131,8 @@ export default async function ProductPage({ params }: ProductPageProps) {
       <SiteHeader
         languageLabel={copy.header.languageLabel}
         locale={locale}
-        nav={copy.header.nav}
       />
       <main className="relative z-10 mx-auto flex w-full max-w-6xl flex-1 flex-col gap-16 px-6 pb-20 sm:px-8 lg:px-10">
-        <Link className="pixel-chip w-fit" href={productsHref}>
-          {copy.buttons.backToProducts}
-        </Link>
-
         <section className="grid gap-10 lg:grid-cols-[minmax(0,1.05fr)_minmax(280px,0.95fr)] lg:items-start">
           <div className="space-y-7">
             <div className="flex flex-wrap gap-2">
