@@ -26,7 +26,6 @@ export default async function Home() {
   const copy = siteCopy[locale];
   const products = getProducts(locale);
   const organizationStructuredData = {
-    "@context": "https://schema.org",
     "@type": "Organization",
     name: siteName,
     url: getAbsoluteUrl("/"),
@@ -34,14 +33,12 @@ export default async function Home() {
     image: getAbsoluteUrl("/opengraph-image.png"),
   };
   const websiteStructuredData = {
-    "@context": "https://schema.org",
     "@type": "WebSite",
     name: siteName,
     url: getAbsoluteUrl("/"),
     description: siteDescription,
   };
   const itemListStructuredData = {
-    "@context": "https://schema.org",
     "@type": "ItemList",
     name: "Cogi Code Studio Products",
     itemListElement: products.map((product, index) => ({
@@ -56,11 +53,14 @@ export default async function Home() {
     <>
       <script
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify([
-            organizationStructuredData,
-            websiteStructuredData,
-            itemListStructuredData,
-          ]),
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@graph": [
+              organizationStructuredData,
+              websiteStructuredData,
+              itemListStructuredData,
+            ],
+          }).replace(/</g, "\\u003c"),
         }}
         type="application/ld+json"
       />
