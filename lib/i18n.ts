@@ -17,7 +17,7 @@ export const siteCopy = {
       languageLabel: "Language",
     },
     hero: {
-      badges: ["Indie retro-game", "Apple ecosystem", "Coming soon"],
+      badges: ["Indie retro-game", "Apple ecosystem", "Now shipping"],
       eyebrow: "Cogi Code Studio",
       title: "Tiny software for everyday friction.",
       accent: "Made with a little more feeling.",
@@ -28,7 +28,7 @@ export const siteCopy = {
       seeProducts: "See products",
       contact: "Contact",
       sayHello: "Contact us",
-      comingSoon: "Coming Soon",
+      comingSoon: "More updates soon",
       viewDetail: "View detail",
       returnHome: "Return home",
       emailCogi: "Contact us",
@@ -49,9 +49,9 @@ export const siteCopy = {
           "Indie retro visuals, soft colors, and tiny decorative moments without getting noisy.",
       },
       {
-        title: "Two products in orbit",
+        title: "One app now in orbit",
         description:
-          "Galaxy Pomodoro and Capture In Picture are both warming up for their first public release.",
+          "Galaxy Pomodoro is live on the App Store, while Capture In Picture is available as an open source macOS utility.",
       },
     ],
     brandPanel: {
@@ -82,19 +82,19 @@ export const siteCopy = {
       eyebrow: "Products",
       title: "Two indie tools, each with its own little world.",
       description:
-        "Both products get their own detail page, while the home page acts like a calm, retro-flavored front desk for the studio.",
+        "Galaxy Pomodoro and Capture In Picture each get their own detail page, while the home page acts like a calm, retro-flavored front desk for the studio.",
     },
     contact: {
       eyebrow: "Contact",
       title: "Curious about the products or CCS?",
       description:
-        "For early interest, future App Store links, or studio inquiries, use the contact button below.",
+        "For product support, launch questions, or studio inquiries, use the contact button below.",
       labels: {
         email: "Email",
         currentStatus: "Current status",
       },
       statusDescription:
-        "Both products are currently marked as coming soon, with App Store links planned later.",
+        "Galaxy Pomodoro is available on the App Store, and Capture In Picture is available through GitHub Releases.",
     },
     privacy: {
       eyebrow: "Privacy",
@@ -157,9 +157,9 @@ export const siteCopy = {
       feature: "Feature",
       statusSection: {
         eyebrow: "Status",
-        title: "Still warming up.",
+        title: "Current release status.",
         description:
-          "This page is ready to present the product shape early, even before the App Store link and pricing are final.",
+          "This page keeps the latest download, pricing, support, and privacy details in one place.",
       },
       contactSection: {
         eyebrow: "Contact",
@@ -187,7 +187,7 @@ export const siteCopy = {
       languageLabel: "언어",
     },
     hero: {
-      badges: ["인디 레트로 게임", "애플 생태계", "출시 예정"],
+      badges: ["인디 레트로 게임", "애플 생태계", "출시 중"],
       eyebrow: "Cogi Code Studio",
       title: "일상의 불편을 줄이는 작은 소프트웨어.",
       accent: "감성은 한 스푼 더.",
@@ -198,7 +198,7 @@ export const siteCopy = {
       seeProducts: "제품 보기",
       contact: "문의하기",
       sayHello: "문의하기",
-      comingSoon: "출시 예정",
+      comingSoon: "다음 소식 준비 중",
       viewDetail: "상세 보기",
       returnHome: "홈으로 돌아가기",
       emailCogi: "문의하기",
@@ -219,9 +219,9 @@ export const siteCopy = {
           "인디 레트로 감성, 부드러운 색감, 작은 픽셀 장식으로 분위기를 만들되 과하지 않게 유지합니다.",
       },
       {
-        title: "두 개의 앱이 준비 중",
+        title: "하나는 궤도에 진입",
         description:
-          "Galaxy Pomodoro와 Capture In Picture는 모두 첫 공개를 준비하고 있습니다.",
+          "은하 뽀모도로는 App Store에 출시되었고, Capture In Picture는 오픈소스 macOS 유틸리티로 받을 수 있습니다.",
       },
     ],
     brandPanel: {
@@ -252,19 +252,19 @@ export const siteCopy = {
       eyebrow: "제품",
       title: "각자의 작은 세계를 가진 두 개의 인디 툴.",
       description:
-        "두 제품 모두 별도의 상세 페이지를 가지고, 홈은 차분한 레트로 무드의 스튜디오 프런트처럼 동작합니다.",
+        "은하 뽀모도로와 Capture In Picture는 각각 별도의 상세 페이지를 가지고, 홈은 차분한 레트로 무드의 스튜디오 프런트처럼 동작합니다.",
     },
     contact: {
       eyebrow: "문의",
       title: "제품이나 CCS에 관해 궁금하신가요?",
       description:
-        "초기 관심, App Store 링크 알림, 스튜디오 문의까지 아래 문의하기 버튼으로 연결할 수 있습니다.",
+        "제품 지원, 출시 관련 문의, 스튜디오 문의까지 아래 문의하기 버튼으로 연결할 수 있습니다.",
       labels: {
         email: "이메일",
         currentStatus: "현재 상태",
       },
       statusDescription:
-        "두 제품 모두 현재는 출시 예정 상태이며, App Store 링크는 추후 연결될 예정입니다.",
+        "은하 뽀모도로는 App Store에서 받을 수 있고, Capture In Picture는 GitHub Releases를 통해 받을 수 있습니다.",
     },
     privacy: {
       eyebrow: "개인정보",
@@ -327,9 +327,9 @@ export const siteCopy = {
       feature: "기능",
       statusSection: {
         eyebrow: "상태",
-        title: "아직 준비 중이에요.",
+        title: "현재 릴리스 상태.",
         description:
-          "이 페이지는 App Store 링크와 가격이 확정되기 전에도 제품의 방향과 분위기를 먼저 보여주기 위한 구조입니다.",
+          "다운로드, 가격, 지원, 개인정보 안내를 한곳에서 확인할 수 있도록 정리합니다.",
       },
       contactSection: {
         eyebrow: "문의",

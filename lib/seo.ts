@@ -10,6 +10,7 @@ export const siteKeywords = [
   "macOS apps",
   "productivity app",
   "Galaxy Pomodoro",
+  "은하 뽀모도로",
   "Capture In Picture",
   "pixel art landing page",
 ] as const;
