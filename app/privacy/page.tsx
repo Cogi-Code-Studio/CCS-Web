@@ -8,7 +8,12 @@ import {
 import { siteCopy } from "@/lib/i18n";
 import { getCurrentLocale } from "@/lib/i18n.server";
 import { studioEmail } from "@/lib/products";
-import { getAbsoluteUrl, siteName } from "@/lib/seo";
+import {
+  defaultShareImageAlt,
+  defaultShareImagePath,
+  getAbsoluteUrl,
+  siteName,
+} from "@/lib/seo";
 
 export const metadata: Metadata = {
   title: "Privacy Policy",
@@ -26,10 +31,10 @@ export const metadata: Metadata = {
     siteName,
     images: [
       {
-        url: getAbsoluteUrl("/opengraph-image.png"),
-        width: 1536,
-        height: 1024,
-        alt: "Cogi Code Studio pixel logo on a dark navy background.",
+        url: getAbsoluteUrl(defaultShareImagePath),
+        width: 1254,
+        height: 1254,
+        alt: defaultShareImageAlt,
       },
     ],
   },
@@ -38,7 +43,7 @@ export const metadata: Metadata = {
     title: `Privacy Policy | ${siteName}`,
     description:
       "How Cogi Code Studio currently handles personal information on the website and through direct contact.",
-    images: [getAbsoluteUrl("/twitter-image.png")],
+    images: [getAbsoluteUrl(defaultShareImagePath)],
   },
 };
 

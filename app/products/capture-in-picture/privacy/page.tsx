@@ -13,6 +13,8 @@ import {
 } from "@/lib/product-privacy";
 import { getProductBySlug, studioEmail } from "@/lib/products";
 import {
+  defaultShareImageAlt,
+  defaultShareImagePath,
   getAbsoluteUrl,
   getProductMetadataImage,
   getProductMetadataImageAlt,
@@ -22,10 +24,10 @@ import {
 const captureInPicture = getProductBySlug("capture-in-picture", "en");
 const metadataImage = captureInPicture
   ? getProductMetadataImage(captureInPicture)
-  : getAbsoluteUrl("/opengraph-image.png");
+  : getAbsoluteUrl(defaultShareImagePath);
 const metadataImageAlt = captureInPicture
   ? getProductMetadataImageAlt(captureInPicture)
-  : "Cogi Code Studio pixel logo on a dark navy background.";
+  : defaultShareImageAlt;
 
 export const metadata: Metadata = {
   title: "Capture In Picture Privacy Policy",

@@ -132,9 +132,9 @@ export default async function ProductPage({ params }: ProductPageProps) {
         languageLabel={copy.header.languageLabel}
         locale={locale}
       />
-      <main className="relative z-10 mx-auto flex w-full max-w-6xl flex-1 flex-col gap-16 px-6 pb-20 sm:px-8 lg:px-10">
-        <section className="grid gap-10 lg:grid-cols-[minmax(0,1.05fr)_minmax(280px,0.95fr)] lg:items-start">
-          <div className="space-y-7">
+      <main className="relative z-10 mx-auto flex w-full max-w-[86rem] flex-1 flex-col gap-20 px-4 pb-20 pt-8 sm:px-6 lg:px-10">
+        <section className="grid gap-10 lg:grid-cols-[minmax(0,1.08fr)_minmax(22rem,0.92fr)] lg:items-center">
+          <div className="space-y-8">
             <div className="flex flex-wrap gap-2">
               <PixelBadge tone="warm">{product.platform}</PixelBadge>
               <PixelBadge>{product.status}</PixelBadge>
@@ -142,14 +142,14 @@ export default async function ProductPage({ params }: ProductPageProps) {
             </div>
             <div className="space-y-5">
               <div className="space-y-3">
-                <p className="font-pixel text-xl tracking-[0.08em] text-accent-primary sm:text-2xl">
+                <p className="text-xl font-black text-accent-primary sm:text-2xl">
                   {product.name}
                 </p>
-                <p className="text-xs uppercase tracking-[0.28em] text-text-secondary">
+                <p className="text-xs font-bold uppercase tracking-[0.1em] text-text-secondary">
                   {product.category}
                 </p>
               </div>
-              <h1 className="font-display max-w-4xl text-5xl leading-[1.08] text-text-primary sm:text-6xl">
+              <h1 className="max-w-5xl text-[clamp(3.5rem,8vw,8rem)] font-black leading-[0.88] text-text-primary">
                 {product.heroTitle}
               </h1>
               <p className="max-w-2xl text-lg leading-8 text-text-secondary">
@@ -181,7 +181,7 @@ export default async function ProductPage({ params }: ProductPageProps) {
             <div className="grid gap-3 sm:grid-cols-3">
               {product.statusNotes.map((note) => (
                 <div key={note} className="pixel-card p-4">
-                  <p className="font-display text-[0.65rem] uppercase tracking-[0.2em] text-accent-primary">
+                  <p className="text-[0.65rem] font-black uppercase tracking-[0.1em] text-accent-primary">
                     {copy.detail.statusCardLabel}
                   </p>
                   <p className="mt-3 text-sm leading-7 text-text-secondary">
@@ -192,7 +192,7 @@ export default async function ProductPage({ params }: ProductPageProps) {
             </div>
           </div>
 
-          <div className="flex items-center justify-center">
+          <div className="flex items-center justify-center rounded-[2.25rem] border border-border-muted bg-[radial-gradient(circle_at_top,rgba(244,165,28,0.2),transparent_36%),rgba(247,244,239,0.04)] p-8 shadow-[0_2rem_5rem_rgba(0,0,0,0.28)]">
             {usesIconShowcase ? (
               <ProductIcon priority product={product} size="showcase" />
             ) : (
@@ -207,15 +207,15 @@ export default async function ProductPage({ params }: ProductPageProps) {
               eyebrow={copy.detail.overviewEyebrow}
               title={product.name}
               description={product.cardDescription}
-              titleClassName="font-pixel text-2xl leading-[1.25] tracking-[0.06em] sm:text-3xl"
+              titleClassName="text-3xl sm:text-4xl"
             />
             <div className="pixel-card space-y-4 p-6">
-              <p className="font-display text-[0.65rem] uppercase tracking-[0.2em] text-accent-primary">
+              <p className="text-[0.65rem] font-black uppercase tracking-[0.1em] text-accent-primary">
                 {copy.detail.quickFacts}
               </p>
               <div className="grid gap-3">
                 <div className="pixel-window bg-surface-subtle p-4">
-                  <p className="font-display text-[0.65rem] uppercase tracking-[0.18em] text-accent-primary">
+                  <p className="text-[0.65rem] font-black uppercase tracking-[0.1em] text-accent-primary">
                     {copy.detail.platform}
                   </p>
                   <p className="mt-3 text-sm leading-7 text-text-secondary">
@@ -223,7 +223,7 @@ export default async function ProductPage({ params }: ProductPageProps) {
                   </p>
                 </div>
                 <div className="pixel-window bg-surface-subtle p-4">
-                  <p className="font-display text-[0.65rem] uppercase tracking-[0.18em] text-accent-primary">
+                  <p className="text-[0.65rem] font-black uppercase tracking-[0.1em] text-accent-primary">
                     {copy.detail.status}
                   </p>
                   <p className="mt-3 text-sm leading-7 text-text-secondary">
@@ -231,7 +231,7 @@ export default async function ProductPage({ params }: ProductPageProps) {
                   </p>
                 </div>
                 <div className="pixel-window bg-surface-subtle p-4">
-                  <p className="font-display text-[0.65rem] uppercase tracking-[0.18em] text-accent-primary">
+                  <p className="text-[0.65rem] font-black uppercase tracking-[0.1em] text-accent-primary">
                     {copy.detail.pricing}
                   </p>
                   <p className="mt-3 text-sm leading-7 text-text-secondary">
@@ -245,10 +245,10 @@ export default async function ProductPage({ params }: ProductPageProps) {
           <div className="grid gap-4 sm:grid-cols-2">
             {product.features.map((feature) => (
               <article key={feature.title} className="pixel-card p-6">
-                <p className="font-display text-[0.65rem] uppercase tracking-[0.2em] text-accent-primary">
+                <p className="text-[0.65rem] font-black uppercase tracking-[0.1em] text-accent-primary">
                   {copy.detail.feature}
                 </p>
-                <h2 className="mt-4 text-2xl leading-tight text-text-primary">
+                <h2 className="mt-4 text-2xl font-black leading-tight text-text-primary">
                   {feature.title}
                 </h2>
                 <p className="mt-4 text-base leading-8 text-text-secondary">
@@ -303,40 +303,42 @@ export default async function ProductPage({ params }: ProductPageProps) {
           </div>
         </section>
 
-        <section className="space-y-8">
-          <SectionHeading
-            eyebrow={copy.detail.relatedSection.eyebrow}
-            title={copy.detail.relatedSection.title}
-            description={copy.detail.relatedSection.description}
-          />
-          <div className="grid gap-6 md:grid-cols-2">
-            {otherProducts.map((entry) => {
-              const detailHref = `/products/${entry.slug}` as Route;
+        {otherProducts.length ? (
+          <section className="space-y-8">
+            <SectionHeading
+              eyebrow={copy.detail.relatedSection.eyebrow}
+              title={copy.detail.relatedSection.title}
+              description={copy.detail.relatedSection.description}
+            />
+            <div className="grid gap-6 md:grid-cols-2">
+              {otherProducts.map((entry) => {
+                const detailHref = `/products/${entry.slug}` as Route;
 
-              return (
-                <article key={entry.slug} className="pixel-card p-6">
-                  <p className="font-display text-[0.65rem] uppercase tracking-[0.2em] text-accent-primary">
-                    {entry.category}
-                  </p>
-                  <h2 className="mt-4 font-pixel text-2xl leading-[1.25] tracking-[0.06em] text-text-primary sm:text-3xl">
-                    {entry.name}
-                  </h2>
-                  <p className="mt-4 text-base leading-8 text-text-secondary">
-                    {entry.cardDescription}
-                  </p>
-                  <div className="mt-6 flex flex-wrap gap-3">
-                    <Link className="pixel-button" href={detailHref}>
-                      {copy.buttons.viewDetail}
-                    </Link>
-                    <span className="pixel-button pixel-button--ghost">
-                      {entry.status}
-                    </span>
-                  </div>
-                </article>
-              );
-            })}
-          </div>
-        </section>
+                return (
+                  <article key={entry.slug} className="pixel-card p-6">
+                    <p className="text-[0.65rem] font-black uppercase tracking-[0.1em] text-accent-primary">
+                      {entry.category}
+                    </p>
+                    <h2 className="mt-4 text-3xl font-black leading-[1] text-text-primary sm:text-4xl">
+                      {entry.name}
+                    </h2>
+                    <p className="mt-4 text-base leading-8 text-text-secondary">
+                      {entry.cardDescription}
+                    </p>
+                    <div className="mt-6 flex flex-wrap gap-3">
+                      <Link className="pixel-button" href={detailHref}>
+                        {copy.buttons.viewDetail}
+                      </Link>
+                      <span className="pixel-button pixel-button--ghost">
+                        {entry.status}
+                      </span>
+                    </div>
+                  </article>
+                );
+              })}
+            </div>
+          </section>
+        ) : null}
       </main>
       <SiteFooter
         contactLabel={copy.buttons.contact}

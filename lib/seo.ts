@@ -9,14 +9,13 @@ export const siteKeywords = [
   "Apple apps",
   "macOS apps",
   "productivity app",
-  "Galaxy Pomodoro",
-  "은하 뽀모도로",
   "Capture In Picture",
-  "pixel art landing page",
+  "indie Apple software",
 ] as const;
-export const defaultShareImagePath = "/opengraph-image.png";
+export const brandLogoPath = "/brand/cogi-logo.png";
+export const defaultShareImagePath = brandLogoPath;
 export const defaultShareImageAlt =
-  "Cogi Code Studio pixel logo on a dark navy background.";
+  "Cogi Code Studio corgi logo on a warm rust background.";
 
 export function getSiteUrl() {
   const explicitUrl = process.env.NEXT_PUBLIC_SITE_URL;
@@ -54,11 +53,7 @@ export function getProductMetadataImageAlt(product: Product) {
   return product.iconAlt ?? defaultShareImageAlt;
 }
 
-export function getProductCategory(product: Product) {
-  if (product.slug === "galaxy-pomodoro") {
-    return "ProductivityApplication";
-  }
-
+export function getProductCategory() {
   return "UtilitiesApplication";
 }
 
@@ -74,7 +69,7 @@ export function getProductStructuredData(product: Product) {
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
     name: product.name,
-    applicationCategory: getProductCategory(product),
+    applicationCategory: getProductCategory(),
     operatingSystem: product.platform,
     description: product.cardDescription,
     url: getAbsoluteUrl(getProductPath(product.slug)),

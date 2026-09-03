@@ -1,10 +1,8 @@
 import type { Locale } from "@/lib/i18n";
 
 export const studioEmail = "admin@cogicode.com";
-export const galaxyPomodoroAppStoreUrl =
-  "https://apps.apple.com/kr/app/%EC%9D%80%ED%95%98-%EB%BD%80%EB%AA%A8%EB%8F%84%EB%A1%9C-%EC%9A%B0%EC%A3%BC%EB%A5%BC-%EB%A7%8C%EB%93%A4%EC%96%B4-%EA%B0%80%EC%84%B8%EC%9A%94/id6759478885";
 
-export type ProductSlug = "galaxy-pomodoro" | "capture-in-picture";
+export type ProductSlug = "capture-in-picture";
 
 type ProductFeature = {
   title: string;
@@ -42,62 +40,6 @@ export type Product = {
 
 const productsByLocale: Record<Locale, Product[]> = {
   en: [
-    {
-      slug: "galaxy-pomodoro",
-      name: "Galaxy Pomodoro",
-      category: "Focus timer",
-      platform: "iPhone, iPad, Mac",
-      status: "Available now",
-      stage: "App Store",
-      ctaLabel: "View on App Store",
-      tagline: "A released pomodoro timer with orbit-based task structure.",
-      cardDescription:
-        "Manage goals as planets, tasks as satellites, and keep focus sessions, daily goals, and progress charts in one Apple-first flow.",
-      heroTitle: "Pomodoro, but built around your project structure.",
-      overview:
-        "Galaxy Pomodoro turns big goals into planets and detailed tasks into satellites, so your work stays readable while focus sessions, presets, notifications, and progress charts keep your routine moving.",
-      features: [
-        {
-          title: "Planet-and-satellite planning",
-          description:
-            "Break goals into a visual orbit system where planets hold the bigger direction and satellites keep the next task clear.",
-        },
-        {
-          title: "Recorded focus sessions",
-          description:
-            "Pick a satellite, start a timer, and let completed sessions build a task-level focus history with daily and weekly summaries.",
-        },
-        {
-          title: "Apple ecosystem flow",
-          description:
-            "Use presets, alerts, completion sounds, background restoration, iCloud sync, and Live Activities on supported devices.",
-        },
-      ],
-      statusNotes: [
-        "Available on the App Store",
-        "Free to download",
-        "Supports iCloud sync",
-      ],
-      contactPrompt:
-        "Ready to build your own little universe of focus? Start from the App Store or read the app privacy policy below.",
-      pricingNote: "Free on the App Store.",
-      contactSectionTitle: "Download, support, and privacy.",
-      heroActions: [
-        {
-          label: "View on App Store",
-          href: galaxyPomodoroAppStoreUrl,
-        },
-      ],
-      contactActions: [
-        {
-          label: "Privacy Policy",
-          href: "/products/galaxy-pomodoro/privacy",
-          tone: "ghost",
-        },
-      ],
-      iconSrc: "/products/galaxy-pomodoro/app-icon.png",
-      iconAlt: "Galaxy Pomodoro app icon.",
-    },
     {
       slug: "capture-in-picture",
       name: "Capture In Picture",
@@ -171,62 +113,6 @@ const productsByLocale: Record<Locale, Product[]> = {
     },
   ],
   ko: [
-    {
-      slug: "galaxy-pomodoro",
-      name: "은하 뽀모도로",
-      category: "포커스 타이머",
-      platform: "iPhone, iPad, Mac",
-      status: "사용 가능",
-      stage: "App Store 출시",
-      ctaLabel: "App Store에서 보기",
-      tagline: "행성과 위성 구조를 가진 출시된 뽀모도로 앱",
-      cardDescription:
-        "큰 목표는 행성으로, 세부 작업은 위성으로 정리하고 집중 세션, 일일 목표, 진행 차트를 한 흐름으로 관리하는 Apple 중심 뽀모도로 앱입니다.",
-      heroTitle: "일의 우주를 만들어 가는 뽀모도로.",
-      overview:
-        "은하 뽀모도로는 큰 목표를 행성으로, 세부 작업을 위성으로 다뤄서 해야 할 일을 더 선명하게 정리하고 집중한 시간을 꾸준히 기록할 수 있도록 돕습니다.",
-      features: [
-        {
-          title: "행성-위성 구조 설계",
-          description:
-            "큰 목표와 세부 작업을 시각적인 궤도 구조로 묶어 복잡한 할 일을 더 직관적으로 정리할 수 있습니다.",
-        },
-        {
-          title: "자동으로 기록되는 집중 세션",
-          description:
-            "집중할 위성을 선택하고 타이머를 시작하면 세션이 자동으로 기록되어 작업별 집중 시간을 확인할 수 있습니다.",
-        },
-        {
-          title: "Apple 생태계에 맞춘 흐름",
-          description:
-            "프리셋, 알림, 완료 사운드, 백그라운드 복원, iCloud 동기화, 지원 기기의 Live Activity까지 자연스럽게 이어집니다.",
-        },
-      ],
-      statusNotes: [
-        "App Store에서 무료 제공",
-        "iCloud 동기화 지원",
-        "iOS 18 이상 필요",
-      ],
-      contactPrompt:
-        "나만의 집중 우주를 만들어 보고 싶다면 App Store에서 바로 시작하거나 앱 개인정보 처리방침을 확인해 주세요.",
-      pricingNote: "App Store에서 무료로 받을 수 있습니다.",
-      contactSectionTitle: "다운로드, 지원, 개인정보 안내.",
-      heroActions: [
-        {
-          label: "App Store에서 보기",
-          href: galaxyPomodoroAppStoreUrl,
-        },
-      ],
-      contactActions: [
-        {
-          label: "개인정보 처리방침",
-          href: "/products/galaxy-pomodoro/privacy",
-          tone: "ghost",
-        },
-      ],
-      iconSrc: "/products/galaxy-pomodoro/app-icon.png",
-      iconAlt: "은하 뽀모도로 앱 아이콘.",
-    },
     {
       slug: "capture-in-picture",
       name: "Capture In Picture",

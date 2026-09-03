@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="620" viewBox="0 0 1200 620">
+  <rect width="1200" height="620" fill="#21110D"/>
+  <circle cx="210" cy="80" r="220" fill="#F4A51C" opacity="0.16"/>
+  <circle cx="1040" cy="160" r="260" fill="#A33A28" opacity="0.22"/>
+  <text x="52" y="78" fill="#FFF1D2" font-family="Pretendard, -apple-system, BlinkMacSystemFont, sans-serif" font-size="44" font-weight="800">Cogi Logo Primary Color Candidates</text>
+  <text x="54" y="120" fill="#FFD993" font-family="Pretendard, -apple-system, BlinkMacSystemFont, sans-serif" font-size="24" font-weight="600">연두색 primary를 대체할 로고 기반 포인트 컬러 후보</text>
+
+  <g transform="translate(50 172)">
+    <rect width="170" height="210" rx="28" fill="#F4A51C"/>
+    <text x="18" y="40" fill="#21110D" font-family="Pretendard, -apple-system, BlinkMacSystemFont, sans-serif" font-size="18" font-weight="800">Primary CTA</text>
+    <text x="18" y="156" fill="#21110D" font-family="Pretendard, -apple-system, BlinkMacSystemFont, sans-serif" font-size="26" font-weight="800">#F4A51C</text>
+    <text x="18" y="184" fill="#21110D" font-family="Pretendard, -apple-system, BlinkMacSystemFont, sans-serif" font-size="15" font-weight="600">몸통 골드</text>
+  </g>
+
+  <g transform="translate(238 172)">
+    <rect width="170" height="210" rx="28" fill="#FFC24B"/>
+    <text x="18" y="40" fill="#21110D" font-family="Pretendard, -apple-system, BlinkMacSystemFont, sans-serif" font-size="18" font-weight="800">Hover Glow</text>
+    <text x="18" y="156" fill="#21110D" font-family="Pretendard, -apple-system, BlinkMacSystemFont, sans-serif" font-size="26" font-weight="800">#FFC24B</text>
+    <text x="18" y="184" fill="#21110D" font-family="Pretendard, -apple-system, BlinkMacSystemFont, sans-serif" font-size="15" font-weight="600">밝은 꿀색</text>
+  </g>
+
+  <g transform="translate(426 172)">
+    <rect width="170" height="210" rx="28" fill="#FFDC98"/>
+    <text x="18" y="40" fill="#21110D" font-family="Pretendard, -apple-system, BlinkMacSystemFont, sans-serif" font-size="18" font-weight="800">Soft Cream</text>
+    <text x="18" y="156" fill="#21110D" font-family="Pretendard, -apple-system, BlinkMacSystemFont, sans-serif" font-size="26" font-weight="800">#FFDC98</text>
+    <text x="18" y="184" fill="#21110D" font-family="Pretendard, -apple-system, BlinkMacSystemFont, sans-serif" font-size="15" font-weight="600">배/얼굴 크림</text>
+  </g>
+
+  <g transform="translate(614 172)">
+    <rect width="170" height="210" rx="28" fill="#A33A28"/>
+    <text x="18" y="40" fill="#FFF1D2" font-family="Pretendard, -apple-system, BlinkMacSystemFont, sans-serif" font-size="18" font-weight="800">Rust Accent</text>
+    <text x="18" y="156" fill="#FFF1D2" font-family="Pretendard, -apple-system, BlinkMacSystemFont, sans-serif" font-size="26" font-weight="800">#A33A28</text>
+    <text x="18" y="184" fill="#FFF1D2" font-family="Pretendard, -apple-system, BlinkMacSystemFont, sans-serif" font-size="15" font-weight="600">배경 러스트</text>
+  </g>
+
+  <g transform="translate(802 172)">
+    <rect width="170" height="210" rx="28" fill="#7E2C22"/>
+    <text x="18" y="40" fill="#FFF1D2" font-family="Pretendard, -apple-system, BlinkMacSystemFont, sans-serif" font-size="18" font-weight="800">Deep Rust</text>
+    <text x="18" y="156" fill="#FFF1D2" font-family="Pretendard, -apple-system, BlinkMacSystemFont, sans-serif" font-size="26" font-weight="800">#7E2C22</text>
+    <text x="18" y="184" fill="#FFF1D2" font-family="Pretendard, -apple-system, BlinkMacSystemFont, sans-serif" font-size="15" font-weight="600">짙은 배경</text>
+  </g>
+
+  <g transform="translate(990 172)">
+    <rect width="170" height="210" rx="28" fill="#3A2118"/>
+    <text x="18" y="40" fill="#FFF1D2" font-family="Pretendard, -apple-system, BlinkMacSystemFont, sans-serif" font-size="18" font-weight="800">Ink Detail</text>
+    <text x="18" y="156" fill="#FFF1D2" font-family="Pretendard, -apple-system, BlinkMacSystemFont, sans-serif" font-size="26" font-weight="800">#3A2118</text>
+    <text x="18" y="184" fill="#FFF1D2" font-family="Pretendard, -apple-system, BlinkMacSystemFont, sans-serif" font-size="15" font-weight="600">눈/코 브라운</text>
+  </g>
+
+  <g transform="translate(54 448)" font-family="Pretendard, -apple-system, BlinkMacSystemFont, sans-serif" font-size="21">
+    <text x="0" y="0" fill="#FFF1D2" font-weight="800">추천안</text>
+    <text x="130" y="0" fill="#FFD993">Primary: #F4A51C</text>
+    <text x="390" y="0" fill="#E8D3BE">현재 연두색 CTA, 태그 active, focus ring 대체</text>
+    <text x="0" y="42" fill="#FFF1D2" font-weight="800">Hover</text>
+    <text x="130" y="42" fill="#FFD993">#FFC24B</text>
+    <text x="390" y="42" fill="#E8D3BE">버튼 hover, border, glow</text>
+    <text x="0" y="84" fill="#FFF1D2" font-weight="800">Surface</text>
+    <text x="130" y="84" fill="#FFD993">#A33A28 / #7E2C22</text>
+    <text x="390" y="84" fill="#E8D3BE">배경 radial, secondary accent</text>
+  </g>
+</svg>

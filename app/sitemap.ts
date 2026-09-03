@@ -1,8 +1,5 @@
 import type { MetadataRoute } from "next";
-import {
-  captureInPicturePrivacyPath,
-  galaxyPomodoroPrivacyPath,
-} from "@/lib/product-privacy";
+import { captureInPicturePrivacyPath } from "@/lib/product-privacy";
 import { getProductSlugs } from "@/lib/products";
 import { getAbsoluteUrl } from "@/lib/seo";
 
@@ -24,12 +21,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     })),
     {
       url: getAbsoluteUrl(captureInPicturePrivacyPath),
-      lastModified,
-      changeFrequency: "monthly",
-      priority: 0.7,
-    },
-    {
-      url: getAbsoluteUrl(galaxyPomodoroPrivacyPath),
       lastModified,
       changeFrequency: "monthly",
       priority: 0.7,

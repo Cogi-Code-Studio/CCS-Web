@@ -3,6 +3,8 @@ import { IBM_Plex_Mono } from "next/font/google";
 import { getCurrentLocale } from "@/lib/i18n.server";
 import {
   getAbsoluteUrl,
+  defaultShareImageAlt,
+  defaultShareImagePath,
   getSiteUrl,
   siteDescription,
   siteKeywords,
@@ -54,10 +56,10 @@ export const metadata: Metadata = {
     locale: "en_US",
     images: [
       {
-        url: getAbsoluteUrl("/opengraph-image.png"),
-        width: 1536,
-        height: 1024,
-        alt: "Cogi Code Studio pixel logo on a dark navy background.",
+        url: getAbsoluteUrl(defaultShareImagePath),
+        width: 1254,
+        height: 1254,
+        alt: defaultShareImageAlt,
       },
     ],
   },
@@ -65,7 +67,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: siteName,
     description: siteDescription,
-    images: [getAbsoluteUrl("/twitter-image.png")],
+    images: [getAbsoluteUrl(defaultShareImagePath)],
   },
   keywords: [...siteKeywords],
 };

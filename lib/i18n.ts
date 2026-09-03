@@ -17,7 +17,7 @@ export const siteCopy = {
       languageLabel: "Language",
     },
     hero: {
-      badges: ["Indie retro-game", "Apple ecosystem", "Now shipping"],
+      badges: ["Indie utility", "macOS workflow", "Open source"],
       eyebrow: "Cogi Code Studio",
       title: "Tiny software for everyday friction.",
       accent: "Made with a little more feeling.",
@@ -49,9 +49,9 @@ export const siteCopy = {
           "Indie retro visuals, soft colors, and tiny decorative moments without getting noisy.",
       },
       {
-        title: "One app now in orbit",
+        title: "One utility now shipping",
         description:
-          "Galaxy Pomodoro is live on the App Store, while Capture In Picture is available as an open source macOS utility.",
+          "Capture In Picture is available as an open source macOS utility for cleaner documentation and demo workflows.",
       },
     ],
     brandPanel: {
@@ -80,9 +80,9 @@ export const siteCopy = {
     ],
     products: {
       eyebrow: "Products",
-      title: "Two indie tools, each with its own little world.",
+      title: "One focused Mac utility, with room to grow.",
       description:
-        "Galaxy Pomodoro and Capture In Picture each get their own detail page, while the home page acts like a calm, retro-flavored front desk for the studio.",
+        "Capture In Picture gets a dedicated detail page, while the home page acts like a warm front desk for the studio.",
     },
     contact: {
       eyebrow: "Contact",
@@ -94,7 +94,7 @@ export const siteCopy = {
         currentStatus: "Current status",
       },
       statusDescription:
-        "Galaxy Pomodoro is available on the App Store, and Capture In Picture is available through GitHub Releases.",
+        "Capture In Picture is available through GitHub Releases as a free open source macOS utility.",
     },
     privacy: {
       eyebrow: "Privacy",
@@ -187,7 +187,7 @@ export const siteCopy = {
       languageLabel: "언어",
     },
     hero: {
-      badges: ["인디 레트로 게임", "애플 생태계", "출시 중"],
+      badges: ["인디 유틸리티", "macOS 워크플로", "오픈소스"],
       eyebrow: "Cogi Code Studio",
       title: "일상의 불편을 줄이는 작은 소프트웨어.",
       accent: "감성은 한 스푼 더.",
@@ -219,9 +219,9 @@ export const siteCopy = {
           "인디 레트로 감성, 부드러운 색감, 작은 픽셀 장식으로 분위기를 만들되 과하지 않게 유지합니다.",
       },
       {
-        title: "하나는 궤도에 진입",
+        title: "하나의 유틸리티 공개 중",
         description:
-          "은하 뽀모도로는 App Store에 출시되었고, Capture In Picture는 오픈소스 macOS 유틸리티로 받을 수 있습니다.",
+          "Capture In Picture는 더 깔끔한 문서화와 데모 워크플로를 위한 오픈소스 macOS 유틸리티입니다.",
       },
     ],
     brandPanel: {
@@ -250,9 +250,9 @@ export const siteCopy = {
     ],
     products: {
       eyebrow: "제품",
-      title: "각자의 작은 세계를 가진 두 개의 인디 툴.",
+      title: "하나의 집중된 Mac 유틸리티, 그리고 다음을 위한 여백.",
       description:
-        "은하 뽀모도로와 Capture In Picture는 각각 별도의 상세 페이지를 가지고, 홈은 차분한 레트로 무드의 스튜디오 프런트처럼 동작합니다.",
+        "Capture In Picture는 별도의 상세 페이지를 가지고, 홈은 따뜻한 스튜디오 프런트처럼 동작합니다.",
     },
     contact: {
       eyebrow: "문의",
@@ -264,7 +264,7 @@ export const siteCopy = {
         currentStatus: "현재 상태",
       },
       statusDescription:
-        "은하 뽀모도로는 App Store에서 받을 수 있고, Capture In Picture는 GitHub Releases를 통해 받을 수 있습니다.",
+        "Capture In Picture는 무료 오픈소스 macOS 유틸리티로 GitHub Releases를 통해 받을 수 있습니다.",
     },
     privacy: {
       eyebrow: "개인정보",
