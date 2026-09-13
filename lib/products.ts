@@ -43,37 +43,37 @@ const productsByLocale: Record<Locale, Product[]> = {
     {
       slug: "capture-in-picture",
       name: "Capture In Picture",
-      category: "Documentation capture tool",
+      category: "Window capture for guides and demos",
       platform: "macOS 26.2+",
       status: "Available now",
       stage: "Open source",
       ctaLabel: "Download DMG",
       tagline: "Capture a specific app window as a PNG.",
       cardDescription:
-        "A macOS app for capturing a specific app window as a PNG, with tools for repeatable documentation and screen recording workflows.",
-      heroTitle: "Repeatable window captures for docs, demos, and recordings.",
+        "Capture an app window as a PNG on your Mac. Set the window size and automate repeated captures for guides and demos.",
+      heroTitle: "Window captures for every step of your guide.",
       overview:
-        "Capture In Picture is built for tutorial writers and anyone who needs repeatable app-window captures. It lets you frame one specific window, save clean PNG output, and run the same capture workflow again with resize, macro, and save controls tuned for macOS.",
+        "Capture In Picture helps you take consistent screenshots for tutorials and demos. Choose an app window, set its size, and save it as a PNG. Use macros to repeat a sequence of actions and captures.",
       features: [
         {
-          title: "Specific window capture",
+          title: "Capture the window you need",
           description:
-            "Capture the app window you actually want instead of your entire desktop, and resize the selected window before capture when you need consistent output.",
+            "Choose an app window to capture and resize it beforehand to keep your screenshots consistent.",
         },
         {
-          title: "Repeat Capture + Macro Builder",
+          title: "Automate repeated captures",
           description:
-            "Build repeat capture flows with arrow keys, wait steps, and capture steps so the same UI sequence can be documented frame by frame.",
+            "Combine arrow key inputs, pauses, and captures into a macro to save each step of a sequence as a screenshot.",
         },
         {
-          title: "Crop and output control",
+          title: "Choose what to save and where",
           description:
-            "Trim the captured image with capture insets before saving, pick a custom output folder, or fall back to the default Pictures/CaptureInPicture location.",
+            "Set how much to trim from the image edges and choose a save folder. Repeated captures use Pictures/CaptureInPicture by default.",
         },
         {
-          title: "Local-first workflow",
+          title: "Screenshots stay on your Mac",
           description:
-            "Show local completion notifications without uploading captured images anywhere. The app is free and open source, with releases published on GitHub.",
+            "Screenshots are saved on your Mac without being uploaded by the app. Enable notifications to know when a capture finishes.",
         },
       ],
       statusNotes: [
@@ -82,9 +82,9 @@ const productsByLocale: Record<Locale, Product[]> = {
         "Requires macOS 26.2 or later",
       ],
       contactPrompt:
-        "Need the latest build, a support path, or the app privacy policy? Start from the links below.",
-      pricingNote: "Free. Source and release builds are available on GitHub.",
-      contactSectionTitle: "Install, support, and privacy.",
+        "Email us for help, report an issue on GitHub, or read how the app handles your data.",
+      pricingNote: "Free. Download the app and view its source code on GitHub.",
+      contactSectionTitle: "Support and privacy",
       heroActions: [
         {
           label: "Download DMG",
@@ -116,37 +116,37 @@ const productsByLocale: Record<Locale, Product[]> = {
     {
       slug: "capture-in-picture",
       name: "Capture In Picture",
-      category: "문서화 캡처 도구",
+      category: "가이드와 데모를 위한 창 캡처",
       platform: "macOS 26.2+",
-      status: "사용 가능",
+      status: "다운로드 가능",
       stage: "오픈소스",
       ctaLabel: "DMG 다운로드",
       tagline: "특정 앱 창만 골라 PNG로 저장하는 캡처 앱",
       cardDescription:
-        "특정 앱 창만 골라 PNG로 저장하고, 반복적인 문서 작성과 화면 기록 워크플로를 안정적으로 만들 수 있는 macOS 앱입니다.",
-      heroTitle: "문서와 데모를 위한 반복 가능한 앱 창 캡처.",
+        "Mac에서 원하는 앱 창을 PNG로 저장합니다. 창 크기를 맞추고 반복 캡처를 자동화해 가이드와 데모에 쓸 스크린샷을 만들 수 있습니다.",
+      heroTitle: "가이드에 필요한 화면을 한 장씩, 간편하게.",
       overview:
-        "Capture In Picture는 튜토리얼 작성자와 반복 화면 기록이 필요한 사용자를 위한 macOS 앱입니다. 원하는 앱 창만 정확히 잡아 PNG로 저장하고, 창 크기 조절, 매크로, 저장 경로 설정까지 한 흐름으로 정리할 수 있습니다.",
+        "Capture In Picture는 튜토리얼과 데모에 쓸 스크린샷을 일정한 크기로 캡처하는 Mac 앱입니다. 원하는 창을 골라 크기를 맞춘 뒤 PNG로 저장하세요. 여러 동작을 차례로 실행하며 캡처하는 작업은 매크로로 반복할 수 있습니다.",
       features: [
         {
-          title: "특정 창만 정확히 캡처",
+          title: "필요한 창만 캡처",
           description:
-            "전체 화면이 아니라 원하는 앱 창만 골라 캡처할 수 있고, 필요하면 캡처 전에 선택한 창 크기를 먼저 맞춰 결과물을 일정하게 유지할 수 있습니다.",
+            "원하는 앱 창을 골라 캡처하세요. 캡처 전에 창 크기를 맞추면 여러 스크린샷을 같은 크기로 저장할 수 있습니다.",
         },
         {
-          title: "Repeat Capture + 매크로 빌더",
+          title: "반복 캡처를 자동으로",
           description:
-            "방향키, 대기, 캡처 스텝을 조합해 같은 UI 흐름을 여러 프레임으로 저장할 수 있어 문서화와 화면 기록 작업에 잘 맞습니다.",
+            "방향키 입력, 대기, 캡처를 원하는 순서로 조합하세요. 같은 작업을 반복하며 단계별 화면을 스크린샷으로 남길 수 있습니다.",
         },
         {
-          title: "크롭과 저장 제어",
+          title: "저장 범위와 폴더 설정",
           description:
-            "캡처 인셋으로 저장 전에 이미지 가장자리를 다듬고, 사용자 지정 저장 폴더를 고르거나 기본 경로인 Pictures/CaptureInPicture를 사용할 수 있습니다.",
+            "이미지 가장자리에서 잘라낼 범위와 저장할 폴더를 정할 수 있습니다. 반복 캡처의 기본 저장 위치는 Pictures/CaptureInPicture입니다.",
         },
         {
-          title: "로컬 우선 워크플로",
+          title: "스크린샷은 내 Mac에",
           description:
-            "캡처 이미지를 외부로 업로드하지 않고 로컬 완료 알림만 표시합니다. 앱은 무료로 사용할 수 있는 오픈소스 프로젝트입니다.",
+            "캡처한 이미지는 앱이 외부로 업로드하지 않고 Mac에 저장합니다. 알림을 켜두면 캡처가 끝났을 때 알려줍니다.",
         },
       ],
       statusNotes: [
@@ -155,9 +155,9 @@ const productsByLocale: Record<Locale, Product[]> = {
         "macOS 26.2 이상이 필요합니다",
       ],
       contactPrompt:
-        "최신 빌드, 지원 경로, 앱 개인정보 처리방침이 필요하다면 아래 링크에서 바로 확인할 수 있습니다.",
-      pricingNote: "무료입니다. 소스와 릴리스 빌드는 GitHub에서 확인할 수 있습니다.",
-      contactSectionTitle: "설치, 지원, 개인정보 안내.",
+        "도움이 필요하면 이메일로 문의하거나 GitHub에 문제를 남겨주세요. 앱의 개인정보 처리방침도 아래에서 확인할 수 있습니다.",
+      pricingNote: "무료입니다. 앱 다운로드와 소스 코드는 GitHub에서 확인할 수 있습니다.",
+      contactSectionTitle: "도움이 필요하신가요?",
       heroActions: [
         {
           label: "DMG 다운로드",

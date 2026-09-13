@@ -6,7 +6,6 @@ import {
   SectionHeading,
   SiteFooter,
   SiteHeader,
-  StudioMarquee,
 } from "@/components/site-shell";
 import { siteCopy } from "@/lib/i18n";
 import { getCurrentLocale } from "@/lib/i18n.server";
@@ -31,10 +30,6 @@ export default async function Home() {
   const locale = await getCurrentLocale();
   const copy = siteCopy[locale];
   const products = getProducts(locale);
-  const marqueeItems =
-    locale === "ko"
-      ? ["작은 툴", "Apple 중심", "불편은 덜고", "감성은 더하고"]
-      : ["Small tools", "Apple-first", "Less friction", "More feeling"];
   const organizationStructuredData = {
     "@type": "Organization",
     name: siteName,
@@ -121,10 +116,6 @@ export default async function Home() {
           </div>
           <HeroVisual locale={locale} products={products} />
         </section>
-
-        <StudioMarquee
-          items={marqueeItems}
-        />
 
         <section id="products" className="space-y-8 scroll-mt-10">
           <SectionHeading

@@ -40,10 +40,6 @@ type HeroVisualProps = {
   products: ReadonlyArray<Product>;
 };
 
-type StudioMarqueeProps = {
-  items: ReadonlyArray<string>;
-};
-
 type ProductCardProps = {
   product: Product;
   viewDetailLabel: string;
@@ -103,7 +99,7 @@ const mockupCopy = {
       macro: "매크로",
       steps: ["앱 선택", "캡처 시작", "워크플로 반복"],
       cleanerDemos: "더 깔끔한 데모",
-      description: "중요한 창만 보여주고 데스크톱의 잡음을 덜어냅니다.",
+      description: "다른 화면은 빼고, 보여주고 싶은 창만 담으세요.",
     },
   },
 } as const;
@@ -115,24 +111,22 @@ export function SiteHeader({ locale, languageLabel }: SiteHeaderProps) {
 
   return (
     <header className="sticky top-0 z-30 mx-auto flex w-full max-w-[86rem] items-center justify-between gap-3 px-4 py-4 sm:px-6 lg:px-10">
-      <div className="flex min-w-0 items-center gap-2 rounded-full border border-border-muted bg-background/70 p-1.5 shadow-[0_1rem_3rem_rgba(0,0,0,0.24)] backdrop-blur-xl">
+      <div className="flex min-w-0 items-center gap-4">
         <Link
           href="/"
-          className="inline-flex shrink-0 items-center gap-3 rounded-full bg-surface-muted py-2 pl-2 pr-4"
+          aria-label="Cogi Code Studio home"
+          className="relative block h-18 w-40 shrink-0 overflow-hidden rounded-[1rem] transition hover:opacity-90 sm:h-20 sm:w-48"
         >
           <Image
-            src="/brand/cogi-logo.png"
+            src="/brand/cogi-wordmark.png"
             alt="Cogi Code Studio logo"
-            width={1254}
-            height={1254}
-            priority
-            className="h-9 w-9 rounded-full object-cover"
+            fill
+            sizes="(min-width: 640px) 192px, 160px"
+            preload
+            className="object-cover object-[center_55%] [filter:drop-shadow(1px_0_0_var(--foreground))_drop-shadow(-1px_0_0_var(--foreground))_drop-shadow(0_1px_0_var(--foreground))_drop-shadow(0_-1px_0_var(--foreground))]"
           />
-          <span className="hidden text-xs font-bold uppercase tracking-[0.12em] text-text-secondary sm:inline">
-            Cogi Code Studio
-          </span>
         </Link>
-        <nav className="hidden items-center gap-1 md:flex">
+        <nav className="hidden items-center gap-1 rounded-full border border-border-muted bg-background/70 p-1.5 backdrop-blur-xl md:flex">
           <Link
             className="rounded-full px-4 py-3 text-xs font-bold uppercase tracking-[0.08em] text-text-secondary transition hover:bg-surface-muted hover:text-text-primary"
             href={productsHref}
@@ -266,19 +260,15 @@ export function BrandPanel({ badges, eyebrow, description }: BrandPanelProps) {
 
 export function HeroVisual({ locale, products }: HeroVisualProps) {
   const [primary, secondary] = products;
-  const productCount = String(products.length).padStart(2, "0");
   const visualCopy =
     locale === "ko"
       ? {
-          appleFirst: "Apple 중심",
-          indieTools: "인디 툴",
-          shippingProducts: "출시/공개 제품",
+          appleFirst: "Mac을 위한 앱",
+          indieTools: "인디 개발",
         }
       : {
-          appleFirst: "Apple-first",
-          indieTools: "Indie tools",
-          shippingProducts:
-            products.length === 1 ? "shipping product" : "shipping products",
+          appleFirst: "Made for Mac",
+          indieTools: "Indie apps",
         };
 
   return (
@@ -293,40 +283,25 @@ export function HeroVisual({ locale, products }: HeroVisualProps) {
           <PixelBadge>{visualCopy.indieTools}</PixelBadge>
         </div>
 
-        <div className="relative mx-auto flex h-72 w-72 items-center justify-center sm:h-96 sm:w-96">
+        <div className="relative mx-auto flex h-72 w-full max-w-72 items-center justify-center sm:h-96 sm:max-w-96">
           <div className="absolute h-44 w-44 rounded-full bg-accent-primary/20 blur-3xl" />
           {primary ? (
-            <div className="hero-float absolute left-2 top-5 w-32 rotate-[-10deg] sm:left-3 sm:top-8 sm:w-40">
+            <Link
+              href={`/products/${primary.slug}` as Route}
+              aria-label={primary.name}
+              className="hero-float relative block w-52 shrink-0 rounded-[22%] transition hover:scale-105 sm:w-64"
+            >
               <ProductIcon priority product={primary} size="hero" />
-            </div>
+            </Link>
           ) : null}
           {secondary ? (
             <div className="hero-float absolute bottom-5 right-2 w-28 rotate-[9deg] [animation-delay:800ms] sm:bottom-8 sm:right-4 sm:w-36">
               <ProductIcon priority product={secondary} size="hero" />
             </div>
           ) : null}
-          <div className="rounded-[2rem] border border-border-muted bg-background/72 p-3 text-center shadow-[0_1rem_3rem_rgba(0,0,0,0.26)] backdrop-blur-xl">
-            <Image
-              src="/brand/cogi-logo.png"
-              alt="Cogi Code Studio logo"
-              width={1254}
-              height={1254}
-              priority
-              className="mx-auto h-28 w-28 rounded-[1.5rem] object-cover sm:h-32 sm:w-32"
-            />
-            <p className="text-[0.65rem] font-black uppercase tracking-[0.12em] text-accent-primary">
-              Cogi Code Studio
-            </p>
-            <p className="mt-2 text-3xl font-black leading-none text-text-primary">
-              {productCount}
-            </p>
-            <p className="mt-1 text-xs font-semibold text-text-muted">
-              {visualCopy.shippingProducts}
-            </p>
-          </div>
         </div>
 
-        <div className="grid gap-2 sm:grid-cols-2">
+        <div className={`grid gap-2 ${products.length > 1 ? "sm:grid-cols-2" : ""}`}>
           {products.slice(0, 2).map((product) => (
             <Link
               key={product.slug}
@@ -345,26 +320,6 @@ export function HeroVisual({ locale, products }: HeroVisualProps) {
             </Link>
           ))}
         </div>
-      </div>
-    </div>
-  );
-}
-
-export function StudioMarquee({ items }: StudioMarqueeProps) {
-  const marqueeItems = [...items, ...items];
-
-  return (
-    <div className="overflow-hidden border-y border-border-hairline py-5 text-text-primary">
-      <div className="studio-marquee gap-4">
-        {marqueeItems.map((item, index) => (
-          <span
-            key={`${item}-${index}`}
-            className="flex items-center gap-4 text-3xl font-black uppercase leading-none tracking-[0.02em] text-text-primary/80 sm:text-5xl"
-          >
-            {item}
-            <span className="h-3 w-3 rounded-full bg-accent-primary" />
-          </span>
-        ))}
       </div>
     </div>
   );
@@ -423,27 +378,27 @@ export function ProductIcon({
     size === "showcase"
       ? "w-full max-w-[20rem] p-4 sm:max-w-[24rem] sm:p-5 lg:max-w-[28rem]"
       : size === "hero"
-        ? "w-full p-2.5"
+        ? "w-full"
         : "w-20 p-2 sm:w-24 sm:p-2.5";
 
   const imageSizes =
     size === "showcase"
       ? "(min-width: 1024px) 416px, (min-width: 640px) 384px, calc(100vw - 64px)"
       : size === "hero"
-        ? "(min-width: 640px) 112px, 96px"
+        ? "(min-width: 640px) 256px, 208px"
         : "80px";
   const imageClassName =
     size === "showcase"
       ? "rounded-[1.45rem] sm:rounded-[1.7rem]"
       : size === "hero"
-        ? "rounded-[1rem]"
+        ? "rounded-[22%]"
         : "rounded-[0.9rem] sm:rounded-[1rem]";
 
   return (
     <div
-      className={`pixel-window relative shrink-0 overflow-hidden border-corgi-cream/15 bg-[radial-gradient(circle_at_top,rgba(244,165,28,0.24),transparent_55%),linear-gradient(180deg,#432117_0%,#21110d_100%)] ${frameClassName}`}
+      className={`${size === "hero" ? "relative shrink-0 drop-shadow-[0_1.5rem_2rem_rgba(0,0,0,0.25)]" : "pixel-window relative shrink-0 overflow-hidden border-corgi-cream/15 bg-[radial-gradient(circle_at_top,rgba(244,165,28,0.24),transparent_55%),linear-gradient(180deg,#432117_0%,#21110d_100%)]"} ${frameClassName}`}
     >
-      <div className="pixel-grid absolute inset-0 opacity-35" />
+      {size !== "hero" ? <div className="pixel-grid absolute inset-0 opacity-35" /> : null}
       <Image
         src={product.iconSrc}
         alt={product.iconAlt ?? `${product.name} icon`}

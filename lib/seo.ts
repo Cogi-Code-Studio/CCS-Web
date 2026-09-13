@@ -2,7 +2,7 @@ import type { Product, ProductSlug } from "@/lib/products";
 
 export const siteName = "Cogi Code Studio";
 export const siteDescription =
-  "Cogi Code Studio makes convenient and delightful software that removes everyday friction with personality, warmth, and a little play.";
+  "Cogi Code Studio makes practical Mac apps that solve small, everyday frustrations, with simple features and thoughtful details.";
 export const siteKeywords = [
   "Cogi Code Studio",
   "indie software studio",
@@ -15,7 +15,7 @@ export const siteKeywords = [
 export const brandLogoPath = "/brand/cogi-logo.png";
 export const defaultShareImagePath = brandLogoPath;
 export const defaultShareImageAlt =
-  "Cogi Code Studio corgi logo on a warm rust background.";
+  "Cogi Code Studio corgi logo on an orange background.";
 
 export function getSiteUrl() {
   const explicitUrl = process.env.NEXT_PUBLIC_SITE_URL;

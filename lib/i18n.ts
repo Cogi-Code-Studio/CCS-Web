@@ -19,82 +19,82 @@ export const siteCopy = {
     hero: {
       badges: ["Indie utility", "macOS workflow", "Open source"],
       eyebrow: "Cogi Code Studio",
-      title: "Tiny software for everyday friction.",
-      accent: "Made with a little more feeling.",
+      title: "Small tools for everyday tasks.",
+      accent: "Make every day a little easier.",
       description:
-        "Cogi Code Studio makes convenient and delightful software. The goal is simple: remove small frustrations without stripping away personality, warmth, or a little play.",
+        "We make apps that solve small, everyday frustrations, with simple features and thoughtful details that make them a pleasure to use.",
     },
     buttons: {
       seeProducts: "See products",
       contact: "Contact",
       sayHello: "Contact us",
       comingSoon: "More updates soon",
-      viewDetail: "View detail",
+      viewDetail: "View details",
       returnHome: "Return home",
       emailCogi: "Contact us",
-      appStoreSoon: "App Store soon",
+      appStoreSoon: "Coming to the App Store",
     },
     footer: {
       privacy: "Privacy",
     },
     highlights: [
       {
-        title: "Apple-first",
+        title: "Made for Mac",
         description:
-          "Small utility apps designed around Apple users and their daily rhythm.",
+          "Practical tools that fit the way you work on your Mac.",
       },
       {
-        title: "Cozy pixel mood",
+        title: "A pleasure to use",
         description:
-          "Indie retro visuals, soft colors, and tiny decorative moments without getting noisy.",
+          "Clear interfaces, warm colors, and a little personality in the details.",
       },
       {
-        title: "One utility now shipping",
+        title: "Free and open source",
         description:
-          "Capture In Picture is available as an open source macOS utility for cleaner documentation and demo workflows.",
+          "Download Capture In Picture for free and explore its source code on GitHub.",
       },
     ],
     brandPanel: {
       badges: ["Apple-first", "Pixel polish"],
-      eyebrow: "Studio mood",
+      eyebrow: "Our approach",
       description:
-        "Small tools, warm pixels, less friction. Built for people who like useful software with a little more feeling.",
+        "Useful tools with thoughtful details, made to make everyday tasks easier and more enjoyable.",
     },
     studioNote: {
       eyebrow: "Studio note",
-      title: "Useful software, but never sterile.",
+      title: "Practical tools with personality.",
       description:
-        "The studio sits somewhere between a quiet cafe website and a tiny retro game menu. The tools stay practical, while the presentation keeps a little softness and charm.",
+        "We focus on useful features and bring a little warmth to the details, from the colors to the way each screen feels.",
     },
     rules: [
       {
         title: "Design rule",
         description:
-          "Leave room to breathe. Use pixels like seasoning, not wallpaper.",
+          "Keep layouts spacious and use small details to add character.",
       },
       {
         title: "Product rule",
         description:
-          "Solve one annoying thing clearly, then add one extra spoon of feeling.",
+          "Solve a specific problem and make the solution a pleasure to use.",
       },
     ],
     products: {
       eyebrow: "Products",
-      title: "One focused Mac utility, with room to grow.",
+      title: "A small tool for the task at hand.",
       description:
-        "Capture In Picture gets a dedicated detail page, while the home page acts like a warm front desk for the studio.",
+        "Capture just the app window you need with Capture In Picture, and save screenshots for your guides and demos.",
     },
     contact: {
       eyebrow: "Contact",
-      title: "Curious about the products or CCS?",
+      title: "Have a question or an idea?",
       description:
-        "For product support, launch questions, or studio inquiries, use the contact button below.",
+        "Get in touch for help with an app, to share feedback, or to ask about the studio.",
       labels: {
         email: "Email",
         currentStatus: "Current status",
       },
       statusDescription:
-        "Capture In Picture is available through GitHub Releases as a free open source macOS utility.",
+        "You can download the latest version of Capture In Picture for free from GitHub Releases.",
     },
     privacy: {
       eyebrow: "Privacy",
@@ -157,25 +157,25 @@ export const siteCopy = {
       feature: "Feature",
       statusSection: {
         eyebrow: "Status",
-        title: "Current release status.",
+        title: "Downloads and requirements",
         description:
-          "This page keeps the latest download, pricing, support, and privacy details in one place.",
+          "Check where to download the app, what it costs, and which macOS version you need.",
       },
       contactSection: {
         eyebrow: "Contact",
-        title: "Want first dibs?",
+        title: "Need a hand?",
       },
       relatedSection: {
-        eyebrow: "Also in orbit",
-        title: "Another product from the studio.",
+        eyebrow: "More apps",
+        title: "Explore our other tools",
         description:
-          "The studio only has a small catalog for now, so each tool gets room to breathe.",
+          "Find more apps from Cogi Code Studio for your everyday tasks.",
       },
     },
     notFound: {
-      title: "That page drifted out of orbit.",
+      title: "We couldn’t find that page.",
       description:
-        "Head back to the studio front page and browse the current products from there.",
+        "Return to the home page to explore our apps.",
     },
   },
   ko: {
@@ -187,84 +187,84 @@ export const siteCopy = {
       languageLabel: "언어",
     },
     hero: {
-      badges: ["인디 유틸리티", "macOS 워크플로", "오픈소스"],
+      badges: ["인디 앱", "macOS 도구", "오픈소스"],
       eyebrow: "Cogi Code Studio",
       title: "일상의 불편을 줄이는 작은 소프트웨어.",
-      accent: "감성은 한 스푼 더.",
+      accent: "매일 조금 더 편하게.",
       description:
-        "Cogi Code Studio는 편리하고 즐거운 소프트웨어를 만듭니다. 작은 불편을 덜어내되, 성격과 따뜻함, 그리고 약간의 장난기는 남겨두는 것이 목표입니다.",
+        "일상에서 자주 마주치는 작은 불편을 해결하는 앱을 만듭니다. 필요한 기능은 간결하게, 쓰는 경험은 즐겁게 다듬습니다.",
     },
     buttons: {
       seeProducts: "제품 보기",
       contact: "문의하기",
       sayHello: "문의하기",
-      comingSoon: "다음 소식 준비 중",
+      comingSoon: "새로운 소식을 준비하고 있어요",
       viewDetail: "상세 보기",
       returnHome: "홈으로 돌아가기",
       emailCogi: "문의하기",
-      appStoreSoon: "App Store 예정",
+      appStoreSoon: "App Store 출시 예정",
     },
     footer: {
       privacy: "개인정보 처리방침",
     },
     highlights: [
       {
-        title: "애플 중심",
+        title: "Mac에 맞춘 도구",
         description:
-          "애플 사용자의 작업 리듬을 기준으로 설계한 작은 유틸리티 앱들입니다.",
+          "Mac에서 매일 하는 작업을 더 간편하게 돕습니다.",
       },
       {
-        title: "포근한 픽셀 무드",
+        title: "쓰는 즐거움",
         description:
-          "인디 레트로 감성, 부드러운 색감, 작은 픽셀 장식으로 분위기를 만들되 과하지 않게 유지합니다.",
+          "보기 편한 화면과 따뜻한 색감, 작은 디테일에 개성을 담습니다.",
       },
       {
-        title: "하나의 유틸리티 공개 중",
+        title: "무료 오픈소스",
         description:
-          "Capture In Picture는 더 깔끔한 문서화와 데모 워크플로를 위한 오픈소스 macOS 유틸리티입니다.",
+          "Capture In Picture는 무료로 쓸 수 있고, 소스 코드도 GitHub에 공개되어 있습니다.",
       },
     ],
     brandPanel: {
-      badges: ["애플 중심", "픽셀 디테일"],
-      eyebrow: "스튜디오 무드",
+      badges: ["Mac을 위한 앱", "세심한 디테일"],
+      eyebrow: "우리가 만드는 도구",
       description:
-        "작지만 기분 좋은 소프트웨어, 따뜻한 픽셀, 덜어낸 마찰. 실용적이면서도 기억에 남는 툴을 좋아하는 사람들을 위해 만듭니다.",
+        "매일 하는 일을 조금 더 편하고 즐겁게 만드는 도구. 필요한 기능과 작은 디테일을 함께 챙깁니다.",
     },
     studioNote: {
       eyebrow: "스튜디오 노트",
-      title: "유용하지만, 무미건조하진 않게.",
+      title: "쓸모에 개성을 더합니다",
       description:
-        "이 스튜디오는 조용한 카페 웹사이트와 작은 레트로 게임 메뉴 사이 어딘가에 있습니다. 기능은 실용적으로, 표현은 조금 더 부드럽고 다정하게 가져갑니다.",
+        "꼭 필요한 기능에 집중하면서도, 화면의 색감과 작은 표현까지 세심하게 다듬습니다.",
     },
     rules: [
       {
         title: "디자인 규칙",
         description:
-          "숨 쉴 여백을 남기고, 픽셀은 벽지가 아니라 향신료처럼 사용합니다.",
+          "화면에는 여유를 두고, 작은 디테일로 개성을 더합니다.",
       },
       {
         title: "제품 규칙",
         description:
-          "하나의 불편을 또렷하게 해결하고, 그 위에 감성을 한 스푼 더합니다.",
+          "구체적인 불편을 해결하고, 쓰는 과정도 편하게 만듭니다.",
       },
     ],
     products: {
       eyebrow: "제품",
-      title: "하나의 집중된 Mac 유틸리티, 그리고 다음을 위한 여백.",
+      title: "필요한 순간에 꺼내 쓰는 작은 도구",
       description:
-        "Capture In Picture는 별도의 상세 페이지를 가지고, 홈은 따뜻한 스튜디오 프런트처럼 동작합니다.",
+        "Capture In Picture로 필요한 앱 창만 캡처해 보세요. 사용 가이드와 데모에 넣을 스크린샷을 간편하게 만들 수 있습니다.",
     },
     contact: {
       eyebrow: "문의",
-      title: "제품이나 CCS에 관해 궁금하신가요?",
+      title: "궁금한 점을 들려주세요",
       description:
-        "제품 지원, 출시 관련 문의, 스튜디오 문의까지 아래 문의하기 버튼으로 연결할 수 있습니다.",
+        "앱을 쓰다가 막힌 점, 개선 제안, 스튜디오에 대한 궁금증을 이메일로 보내주세요.",
       labels: {
         email: "이메일",
         currentStatus: "현재 상태",
       },
       statusDescription:
-        "Capture In Picture는 무료 오픈소스 macOS 유틸리티로 GitHub Releases를 통해 받을 수 있습니다.",
+        "Capture In Picture 최신 버전은 GitHub Releases에서 무료로 받을 수 있습니다.",
     },
     privacy: {
       eyebrow: "개인정보",
@@ -327,25 +327,25 @@ export const siteCopy = {
       feature: "기능",
       statusSection: {
         eyebrow: "상태",
-        title: "현재 릴리스 상태.",
+        title: "다운로드와 사용 조건",
         description:
-          "다운로드, 가격, 지원, 개인정보 안내를 한곳에서 확인할 수 있도록 정리합니다.",
+          "다운로드 위치와 가격, 필요한 macOS 버전을 확인하세요.",
       },
       contactSection: {
         eyebrow: "문의",
-        title: "먼저 받아보고 싶다면?",
+        title: "도움이 필요하신가요?",
       },
       relatedSection: {
-        eyebrow: "다른 궤도",
-        title: "같은 스튜디오의 다른 제품.",
+        eyebrow: "다른 앱",
+        title: "이런 도구도 만들고 있어요",
         description:
-          "지금은 작은 카탈로그이기 때문에, 각 도구마다 충분한 숨을 쉴 공간을 주고 있습니다.",
+          "일상의 작은 작업을 도와줄 Cogi Code Studio의 다른 앱도 살펴보세요.",
       },
     },
     notFound: {
-      title: "이 페이지는 궤도 밖으로 흘러갔어요.",
+      title: "페이지를 찾을 수 없어요",
       description:
-        "홈으로 돌아가서 현재 공개된 스튜디오 제품들을 다시 둘러보세요.",
+        "홈으로 돌아가 공개된 앱을 둘러보세요.",
     },
   },
 } as const;
